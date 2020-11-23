@@ -9,7 +9,7 @@ Surveying the landscape:
 
 The Haskell ecosystem is an amazing piece of research and engineering; it's widely used in academia, and it has been seeing a steady adoption in [industry](https://github.com/erkmos/haskell-companies) to solve [really complex problems](https://github.com/github/semantic/blob/master/docs/why-haskell.md).
 
-When someone starts acquiring the skill, it is through the language first. Once you get familiar with it, you will also need to learn how to build a project, and use some libraries, linters, formatters, automatically test your code, as well as have some development workflow that works for you.
+When someone starts acquiring the skill, it is through the language first. Once you get familiar with it, you will also need to learn how to build a project, and use some libraries, linters, formatters, automatically test your code, in order to release a library or executable artifact; as well as have some development workflow that works for you.
 
 Haskell happens to be a 30 year old language, started by a research group. You can imagine that this sole fact could imply some [rough](https://twitter.com/EncodePanda/status/1211433804063223809) [edges](https://www.snoyman.com/blog/2020/10/haskell-bad-parts-1) and an enormous baggage of decisions made that have changed the landscape of programming languages as well as others that have been proven bad or far from ideal. A lot has happened in the world in 30 years, and so in Haskell too.
 
@@ -33,10 +33,12 @@ Ideas coming from **declarative** programming have influenced enormously latest 
 Haskell falls under a flavour of **declarative** programming where functions occupy the central role; as opposed to procedures or subroutines, like in **imperative** languages.
 A function is a binary relation between two sets that associates every element of the first set to exactly one element of the second set.
 
+Last but not least, when it comes to its syntax Haskell’s is not in the C-style tradition. This is because the main starting point for the comittee that initially designed the language was [Miranda](https://www.cs.kent.ac.uk/people/staff/dat/miranda/). Therefore, at least at a surface level it has a lot of similarities with Miranda's syntax.
+
 My journey into Haskell:
 ------------------------
 
-I think I wrote my first lines of Haskell around mid 2015, while reading [**Learn You A Haskell For Great Good**](http://learnyouahaskell.com/), I used to play with the code in a very disorganised way, some times directly in the REPL, sometimes in files via `runhaskell`.
+I think I wrote my first lines of Haskell around mid 2015, while reading [**Learn You A Haskell For Great Good**](http://learnyouahaskell.com/), and even then I wished I started this journey before. I used to play with the code in a very disorganised way, some times directly in the REPL, sometimes in files via `:load` or `runhaskell`.
 By typing code examples myself, I forced myself to face compiler warnings and compiler errors that were unfamiliar to me. Once that was passed, if curiosity kicked in, I would run little experiments by modifying the program, and re-run it to see what happens.
 I remember bloating single files with lots of code, so that one simple `:load` in the REPL would type check everything. I did that because I was exploring the language, and didn’t really want to get distracted with build tools or things along those lines. This approach clearly doesn’t scale and things become crazy quite quickly. Not that I'm recommending this, it's a bit of a stretch, but at least at the start, it got me focused on the language, and craving a lot for a build tool.
 
@@ -78,7 +80,7 @@ But when it comes to blogposts on Haskell, content coming from these authors (in
  - [https://chrispenner.ca/](https://chrispenner.ca/)
  - [https://typeclasses.com/](https://typeclasses.com/)
 
-Other resources include podcasts too, the ones I’m normally up to date with are:
+Podcasts are a great way to get into new programming stuff too, the ones I’m normally up to date with are:
 
  - [http://corecursive.com/](http://corecursive.com/])  
  - [https://haskellweekly.news/podcast.html](https://haskellweekly.news/podcast.html])  
