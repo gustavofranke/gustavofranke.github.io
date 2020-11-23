@@ -20,4 +20,3 @@ cabal.sandbox.config
 .idea/
 *.lock
 _cache/
-_site/
