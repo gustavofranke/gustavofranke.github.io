@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gustavo Franke - My journey into Haskell</title>
+        <link rel="stylesheet" href="../css/default.css" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P81VM8E4B9"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-P81VM8E4B9');
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">GUSTAVO FRANKE</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <h1>My journey into Haskell</h1>
+            <article>
+    <section class="header">
+        Posted on November 20, 2020
+        
+    </section>
+    <section>
+        <h2 id="surveying-the-landscape">Surveying the landscape:</h2>
+<p>The Haskell ecosystem is an amazing piece of research and engineering; it’s widely used in academia, and it has been seeing a steady adoption in <a href="https://github.com/erkmos/haskell-companies">industry</a> to solve <a href="https://github.com/github/semantic/blob/master/docs/why-haskell.md">really complex problems</a>.</p>
+<p>When someone starts acquiring the skill, it is through the language first. Once you get familiar with it, you will also need to learn how to build a project, and use some libraries, linters, formatters, automatically test your code, in order to release a library or executable artifact; as well as have some development workflow that works for you.</p>
+<p>Haskell happens to be a 30 year old language, started by a research group. You can imagine that this sole fact could imply some <a href="https://twitter.com/EncodePanda/status/1211433804063223809">rough</a> <a href="https://www.snoyman.com/blog/2020/10/haskell-bad-parts-1">edges</a> and an enormous baggage of decisions made that have changed the landscape of programming languages as well as others that have been proven bad or far from ideal. A lot has happened in the world in 30 years, and so in Haskell too.</p>
+<p>Now, Haskell is <a href="https://www.youtube.com/watch?v=iSmkqocn0oQ">not quite a mainstream language</a>. For people proficient in other languages, the discussions happening in social media could look strange, with very different concepts and terminology - leaving Haskell looking like a hard and complicated language, or even esoteric perhaps.</p>
+<p>It’s been argued that social media makes Haskell seem much <a href="https://patrickmn.com/software/the-haskell-pyramid/">harder to learn than it really is</a>. Essentially, expert users of the language that know their fundamentals very well, exchanging ideas about the state of the art of some obscure feature or technique or concept, etc.</p>
+<p>But the truth of the matter is that you don’t need to be an expert in the language to use it. Or to accomplish interesting things in it. What you need to understand is that this is just a very different language, not hard or complicated. This means that some of your previous programming experience might not be useful to pick things up quickly. Some of them might, but definitely not all.</p>
+<p>When I say family of languages, I’m referring to the family of <strong>imperative</strong> languages, and the family of <strong>declarative</strong> languages. They differ in how they compute things. In both cases, their core concepts to perform a computation, as well as the concepts to glue together a number of them are completely different.</p>
+<p>In <strong>imperative</strong> programming, the basic method of computation is changing stored values. These are also more mainstream, with more industry adoption. In <strong>declarative</strong> programming, the basic method of computation is the application of functions to arguments. These are less mainstream, with less industry adoption.</p>
+<p>Ideas coming from <strong>declarative</strong> programming have influenced enormously latest versions of languages like Python, Javascript, C#, Java, and others. And vice versa, <a href="https://hackage.haskell.org/package/doctest">Python’s doctest</a>, <a href="https://hackage.haskell.org/package/hspec">Ruby’s RSpec</a>, <a href="https://hackage.haskell.org/package/HUnit">Smalltalk’s SUnit</a> are examples of ideas percolating into Haskell from other language communities.</p>
+<p>Haskell falls under a flavour of <strong>declarative</strong> programming where functions occupy the central role; as opposed to procedures or subroutines, like in <strong>imperative</strong> languages. A function is a binary relation between two sets that associates every element of the first set to exactly one element of the second set.</p>
+<p>Last but not least, when it comes to its syntax Haskell’s is not in the C-style tradition. This is because the main starting point for the comittee that initially designed the language was <a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/">Miranda</a>. Therefore, at least at a surface level it has a lot of similarities with Miranda’s syntax.</p>
+<h2 id="my-journey-into-haskell">My journey into Haskell:</h2>
+<p>I think I wrote my first lines of Haskell around mid 2015, while reading <a href="http://learnyouahaskell.com/"><strong>Learn You A Haskell For Great Good</strong></a>, and even then I wished I started this journey before. I used to play with the code in a very disorganised way, some times directly in the REPL, sometimes in files via <code>:load</code> or <code>runhaskell</code>. By typing code examples myself, I forced myself to face compiler warnings and compiler errors that were unfamiliar to me. Once that was passed, if curiosity kicked in, I would run little experiments by modifying the program, and re-run it to see what happens. I remember bloating single files with lots of code, so that one simple <code>:load</code> in the REPL would type check everything. I did that because I was exploring the language, and didn’t really want to get distracted with build tools or things along those lines. This approach clearly doesn’t scale and things become crazy quite quickly. Not that I’m recommending this, it’s a bit of a stretch, but at least at the start, it got me focused on the language, and craving a lot for a build tool.</p>
+<p>Then I tried and failed many times to get familiar with <a href="https://cabal.readthedocs.io/en/latest/">Cabal</a>, and then <a href="https://docs.haskellstack.org/en/stable/README/">Stack</a>. But things didn’t quite work for me, until I found <a href="https://howistart.org/posts/haskell/1/">this blog post</a> which was a great start. Seriously, I can’t stress enough how much that blogpost unlocked for me, you should give it a try. Follow the steps from it, and then move on to tackle some project of your own that you might have in mind. Now I was able to look into all those things I mentioned before, that any codebase would require (build a project, add libraries, linters, formatters, test the code).</p>
+<p>At this point, my local development environment was a text editor, not much more. Stack has a <code>—file-watch</code> option. So, as a Haskell beginner, this provided me fast enough feedback, and IDE-like features weren’t strictly necessary. It’s only very recently that I’ve discovered the <a href="https://marketplace.visualstudio.com/items?itemName=haskell.haskell">Haskell for Visual Studio Code</a> extension, and I’m pretty happy with it. I installed it, and it just worked.</p>
+<p>Back to <strong>Learn You A Haskell For Great Good</strong>, the book; it has helped a lot of people to get started with Haskell the language. But while most introductory texts come with lots of exercises, <strong>Learn You A Haskell For Great Good</strong> explains things in a friendly writing style, the code consists of somewhat trivial examples, to show you the syntax and basic building blocks. I think that’s a good thing, it also introduces you to modules, basic command line apps, as well as reading and writing files. Once you’re finished with it, this begs the question - what next? Read another book? I’m not a fan of reading, but I read a lot when I don’t quite know what my next step is, and that is very often. So I took up <a href="http://www.cs.nott.ac.uk/~pszgmh/pih.html"><strong>Programming in Haskell 2nd Edition</strong> by Graham Hutton</a></p>
+<p>This is an amazing book, I’m a big fan of it. The content overlaps in many areas, but the extended examples are non-trivial (at least for learners), and it comes with lots of exercises too. While I did type all the code myself, and turned it into a project, with modules, doctest and things like that. I still haven’t finished the exercises, but I clearly intend to.</p>
+<p>It is at this point when I’m really fed up with reading about Haskell. It seems like one can read entire books and still not know how to develop in Haskell. As a programmer, I had an itch to write lots of code, so I took up the <a href="https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems">99 Problems</a>. There is a lot of fun in those, and you know one learns to write code by writing code, after dealing with a few of those problems I felt that I was finally getting the hang of it, and also sort of familiar with the syntax. Am I proud of that code? No, not at all. I’m sure there are better solutions to these problems out there than mine. But at least it kept me going. It was fun. This time it wasn’t just passive reading because I didn’t know what to do next, or because every time I sat to learn a build system for Haskell things didn’t work for me.</p>
+<p>Speaking of which, the other day I found <a href="https://gist.github.com/gustavofranke/ae05845f2082c8d8f7ded8f25ae23b96">this code I wrote</a> for the fizz buzz problem, only to find <a href="https://www.parsonsmatt.org/2016/02/27/an_elegant_fizzbuzz.html">a blog post</a> with a much better and idiomatic solution than mine, that also exploits some cool mathy aspects, with a much more idiomatic result.</p>
+<p>If for some reason you’re curious, these are the Haskell toy projects I mentioned before, on GitHub:</p>
+<ul>
+<li><a href="https://github.com/gustavofranke/hutton">https://github.com/gustavofranke/hutton</a></li>
+<li><a href="https://github.com/gustavofranke/ninety-nine">https://github.com/gustavofranke/ninety-nine</a></li>
+<li><a href="https://github.com/gustavofranke/lens-exercises">https://github.com/gustavofranke/lens-exercises</a></li>
+<li><a href="https://github.com/gustavofranke/rest-api">https://github.com/gustavofranke/rest-api</a></li>
+</ul>
+<p>There are lots of interesting introductory books. These days, the go-to one seems to be the <a href="https://haskellbook.com/"><strong>Haskell Book</strong></a>. While I haven’t read it, I’ve seen that it’s written in a very welcoming style, and the highlights are Property Based Testing with the QuickCheck library, Monad Transformers Library, lambda calculus, with lots of examples and exercises.</p>
+<p>I remember reading somewhere that when it comes to intermediate or advanced Haskell, all knowledge is scattered around in blogposts. There are people working very hard to change this. But when it comes to blogposts on Haskell, content coming from these authors (in no particular order) has helped me understand things a little (actually, a lot) better:</p>
+<ul>
+<li><a href="https://www.stephendiehl.com/">https://www.stephendiehl.com/</a></li>
+<li><a href="http://www.haskellforall.com/">http://www.haskellforall.com/</a></li>
+<li><a href="https://www.parsonsmatt.org/">https://www.parsonsmatt.org/</a></li>
+<li><a href="https://kowainik.github.io/">https://kowainik.github.io/</a></li>
+<li><a href="https://williamyaoh.com/">https://williamyaoh.com/</a></li>
+<li><a href="https://lexi-lambda.github.io/">https://lexi-lambda.github.io/</a></li>
+<li><a href="https://chrispenner.ca/">https://chrispenner.ca/</a></li>
+<li><a href="https://typeclasses.com/">https://typeclasses.com/</a></li>
+</ul>
+<p>Podcasts are a great way to get into new programming stuff too, the ones I’m normally up to date with are:</p>
+<ul>
+<li><a href="http://corecursive.com/%5D">http://corecursive.com/</a><br />
+</li>
+<li><a href="https://haskellweekly.news/podcast.html%5D">https://haskellweekly.news/podcast.html</a><br />
+</li>
+<li><a href="http://www.haskellcast.com/%5D">http://www.haskellcast.com/</a></li>
+</ul>
+<h2 id="a-few-closing-thoughts">A few closing thoughts:</h2>
+<p>Practice doesn’t actually make perfect, perfect practice makes perfect.</p>
+<p>For our intents and purposes, that seems to be <strong>focused practice writing code</strong>.</p>
+<p>It’s easy though, to get too frustrated or too over-tired. I try to have more than one project on the go at a time, so I can switch back and forth, think a little more about things, and then come back after a while.</p>
+<p>Read a lot, I wish I knew how to avoid this. However, you can find that <a href="https://www.stephendiehl.com/posts/essential_haskell.html">long time Haskellers</a> publishing <a href="https://github.com/cohomolo-gy/haskell-resources">their reading lists</a> and these are not short.</p>
+<p>I think there’s <a href="https://williamyaoh.com/posts/2020-01-11-road-to-proficient.html">a lot more to get</a> from books like <strong>Learn You A Haskell For Great Good</strong> and <strong>Programming in Haskell 2nd Edition</strong> than just reading them. The starting point for this is to play with the code in a more project oriented way, from within what a build tool has to offer, making it closer to a real world codebase.</p>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </footer>
+    </body>
+</html>
