@@ -66,7 +66,7 @@ If for some reason you’re curious, these are the Haskell toy projects I mentio
  - [https://github.com/gustavofranke/lens-exercises](https://github.com/gustavofranke/lens-exercises)
  - [https://github.com/gustavofranke/rest-api](https://github.com/gustavofranke/rest-api)
 
-There are lots of interesting introductory books. These days, the go-to one seems to be the [**Haskell Book**](https://haskellbook.com/). While I haven’t read it, I’ve seen that it’s written in a very welcoming style, and the highlights are Property Based Testing with the QuickCheck library, Monad Transformers Library, lambda calculus, with lots of examples and exercises.
+There are lots of interesting introductory books. These days, the go-to one seems to be the [**Haskell Book**](https://haskellbook.com/). While I haven’t read it, I’ve seen that it’s written in a very welcoming style, and the highlights are Property Based Testing with the QuickCheck library, monad transformers, lambda calculus, with lots of examples and exercises.
 
 I remember reading somewhere that when it comes to intermediate or advanced Haskell, all knowledge is scattered around in blogposts. There are people working very hard to change this.
 But when it comes to blogposts on Haskell, content coming from these authors (in no particular order) has helped me understand things a little (actually, a lot) better:
